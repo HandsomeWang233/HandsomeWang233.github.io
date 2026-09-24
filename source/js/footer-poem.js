@@ -1,6 +1,6 @@
 (() => {
   const sdkUrl = 'https://sdk.jinrishici.com/v2/browser/jinrishici.js';
-  const fallback = '诗句暂不可用';
+  const fallback = '诗句暂加载中...';
   let loading;
   let sentence;
 
