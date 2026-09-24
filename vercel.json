@@ -1,0 +1,4 @@
+{
+  "buildCommand": "BLOG_DEPLOY_ORIGIN=Vercel npm run build",
+  "outputDirectory": "public"
+}

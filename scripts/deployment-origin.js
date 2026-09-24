@@ -1,11 +1,14 @@
 'use strict';
 
 const labels = {
-  github: 'GithubPages',
-  vercel: 'VercelPages',
+  github: 'Github Pages',
+  Vercel: 'Vercel Pages',
+  vercel: 'Vercel Pages',
+  huggingface: 'HuggingFace Spaces',
+  tencent: 'Tencent Pages',
 };
-const origin = process.env.BLOG_DEPLOY_ORIGIN || (process.env.VERCEL === '1' ? 'vercel' : null);
-const label = labels[origin] || '未知';
+const origin = process.env.BLOG_DEPLOY_ORIGIN;
+const label = Object.hasOwn(labels, origin) ? labels[origin] : '未知';
 
 hexo.extend.filter.register('after_render:html', function (html) {
   if (typeof html !== 'string' || !html.includes('data-deployment-origin')) return html;
