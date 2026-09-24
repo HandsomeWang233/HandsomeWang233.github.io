@@ -7,6 +7,7 @@ const labels = {
   huggingface: 'HuggingFace Spaces',
   tencent: 'Tencent Pages',
   cloudflare: 'Cloudflare Pages',
+  netlify: 'Netlify Pages',
 };
 const origin = process.env.BLOG_DEPLOY_ORIGIN;
 const label = Object.hasOwn(labels, origin) ? labels[origin] : '未知';
