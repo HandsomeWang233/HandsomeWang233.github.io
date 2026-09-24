@@ -5,9 +5,13 @@ leftbar:
     href: /
   menu:
     - id: post
-      title: 博客
+      title: 文章
       icon: default:documents
       url: /
+    - id: tags
+      title: 标签
+      icon: default:hashtag
+      url: /tags/
     - id: archives
       title: 归档
       icon: default:calendar
@@ -16,3 +20,12 @@ leftbar:
       title: 关于
       icon: default:profile
       url: /about/
+
+article:
+  listing:
+    show_tags: true
+  footer:
+    license: 转载请注明出处
+
+footer:
+  content: © 2026 Wang233  Powered by Hexo & Stellar
