@@ -46,6 +46,8 @@ jobs:
           console.log(`Site URL: ${url}`);
           NODE
       - name: Build site
+        env:
+          BLOG_DEPLOY_ORIGIN: github
         run: npm run build
       - name: Configure Pages
         uses: actions/configure-pages@v5
