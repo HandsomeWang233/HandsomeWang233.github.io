@@ -28,8 +28,13 @@ article:
     license: 转载请注明出处
 
 footer:
-  content: © 2026 Wang233  Powered by Hexo & Stellar
+  content: |
+    <span data-footer-poem aria-live="polite">诗句暂不可用</span>
+
+    © 2026 Wang233  Powered by Hexo & Stellar · [今日诗词](https://www.jinrishici.com/)
 
 inject:
   head_end: '<link rel="stylesheet" href="/css/article-banner-spacing.css">'
-  body_end: '<script data-stellar-script="core" src="/js/absolute-dates.js" defer></script>'
+  body_end: |
+    <script data-stellar-script="core" src="/js/absolute-dates.js" defer></script>
+    <script data-stellar-script="core" src="/js/footer-poem.js" defer></script>
