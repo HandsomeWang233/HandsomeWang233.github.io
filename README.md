@@ -18,9 +18,9 @@ npm run server
 
 ## 发布到 GitHub Pages
 
-本站仓库：<https://github.com/HandsomeWang233/MyBlog>；发布网址：<https://handsomewang233.github.io/MyBlog/>。
+本站仓库：<https://github.com/HandsomeWang233/HandsomeWang233.github.io>；发布网址：<https://handsomewang233.github.io/>。
 
-GitHub Actions 在每次推送到 `main` 时自动安装依赖、构建站点并发布到 Pages。工作流会根据 GitHub 仓库名自动设置站点 URL；本地 `_config.yml` 也已配置为上述项目 Pages 网址。
+GitHub Actions 在每次推送到 `main` 时自动安装依赖、构建站点并发布到 Pages。工作流会根据 GitHub 仓库名自动设置站点 URL；本地 `_config.yml` 也已配置为上述用户 Pages 网址。
 
 在 GitHub 仓库的 **Settings → Pages → Build and deployment → Source** 中保持选择 **GitHub Actions**。首次发布后可在仓库 **Actions** 中查看 `Deploy Hexo to GitHub Pages` 的构建记录。如果需要手动重跑，在 Actions 选择该工作流的 **Run workflow**。
 
