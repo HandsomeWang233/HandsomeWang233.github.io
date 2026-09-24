@@ -1,0 +1,70 @@
+name: Deploy Hexo to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out blog and Stellar
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - name: Install blog dependencies
+        run: npm ci
+      - name: Install Stellar dependencies
+        run: npm ci --prefix themes/stellar --omit=dev
+      - name: Set Pages URL
+        env:
+          PAGES_OWNER: ${{ github.repository_owner }}
+          PAGES_REPO: ${{ github.event.repository.name }}
+        run: |
+          node - <<'NODE'
+          const fs = require('node:fs');
+          const owner = process.env.PAGES_OWNER.toLowerCase();
+          const repo = process.env.PAGES_REPO;
+          const base = `https://${owner}.github.io`;
+          const url = repo.toLowerCase() === `${owner}.github.io` ? base : `${base}/${repo}`;
+          const config = fs.readFileSync('_config.yml', 'utf8');
+          if (!/^url:.*$/m.test(config)) throw new Error('Missing site URL in _config.yml');
+          fs.writeFileSync('_config.yml', config.replace(/^url:.*$/m, `url: ${url}`));
+          console.log(`Site URL: ${url}`);
+          NODE
+      - name: Build site
+        run: npm run build
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,18 @@
+leftbar:
+  brand:
+    name: 我的博客
+    tagline: 记录与分享
+    href: /
+  menu:
+    - id: post
+      title: 博客
+      icon: default:documents
+      url: /
+    - id: archives
+      title: 归档
+      icon: default:calendar
+      url: /archives/
+    - id: about
+      title: 关于
+      icon: default:profile
+      url: /about/
