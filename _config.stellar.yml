@@ -1,7 +1,7 @@
 leftbar:
   brand:
-    name: 我的博客
-    tagline: 记录与分享
+    name: Wang233's Blog
+    tagline: 技术分享
     href: /
   menu:
     - id: post
