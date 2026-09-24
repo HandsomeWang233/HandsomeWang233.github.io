@@ -3,6 +3,4 @@ title: 关于
 layout: page
 ---
 
-欢迎来到我的博客。这是一个使用 Hexo 与 [Stellar](https://github.com/xaoxuu/hexo-theme-stellar) 构建的个人站点。
-
-站点刚刚建立，内容会逐步更新。
+记录技术探索，分享经验与思考，希望这里的内容对你有所帮助
