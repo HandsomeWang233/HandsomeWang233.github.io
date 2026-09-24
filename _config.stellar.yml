@@ -31,4 +31,5 @@ footer:
   content: © 2026 Wang233  Powered by Hexo & Stellar
 
 inject:
+  head_end: '<link rel="stylesheet" href="/css/article-banner-spacing.css">'
   body_end: '<script data-stellar-script="core" src="/js/absolute-dates.js" defer></script>'
