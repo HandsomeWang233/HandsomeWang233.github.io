@@ -28,7 +28,7 @@ article:
     license: 转载请注明出处
 
 footer:
-  content: '<span data-footer-poem aria-live="polite">诗句暂不可用</span>'
+  content: '<span data-footer-poem aria-live="polite">诗句暂加载中&#46;&#46;&#46;</span>'
 
 inject:
   head_end: '<link rel="stylesheet" href="/css/article-banner-spacing.css">'
