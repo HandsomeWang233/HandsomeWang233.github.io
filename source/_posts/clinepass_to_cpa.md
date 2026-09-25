@@ -5,7 +5,7 @@ tags: [ClinePass, Cherry Studio, CPA, CLIProxyAPI]
 ---
 本文介绍如何通过 **CPA（CLIProxyAPI）** 及其插件 **ClinePassBridge**，将 ClinePass 的模型服务接入 **Cherry Studio**，实现本地代理转发
 
-> 💡 本教程以 **Linux** 环境为例进行部署演示。
+> 💡 本教程以 **Linux** 环境为例进行部署演示
 
 ## 🔗 相关项目地址
 
@@ -81,8 +81,8 @@ systemctl enable --now cpa
 
 ### 2. 安装并启用插件
 
-1. 点击 **插件商店**，搜索 `ClinePassBridge` 进行安装；
-2. 安装完成后，点击 **插件管理** 进行启用。
+1. 点击 **插件商店**，搜索 `ClinePassBridge` 进行安装
+2. 安装完成后，点击 **插件管理** 进行启用
 
 ---
 
