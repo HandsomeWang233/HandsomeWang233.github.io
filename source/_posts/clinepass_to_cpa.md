@@ -1,11 +1,7 @@
 ---
 title: ClinePass 通过 CPA（CLIProxyAPI）接入 Cherry Studio
 date: 2026-09-26 4:30
-tags: 
-	- ClinePass
-	- Cherry Studio
-	- CPA
-	- CLIProxyAPI
+tags: [ClinePass, Cherry Studio, CPA, CLIProxyAPI]
 ---
 本文介绍如何通过 **CPA（CLIProxyAPI）** 及其插件 **ClinePassBridge**，将 ClinePass 的模型服务接入 **Cherry Studio**，实现本地代理转发
 
